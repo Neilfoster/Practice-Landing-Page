@@ -73,6 +73,8 @@ p {
     font-size: clamp(3rem,calc(5vw + 1rem), 4.5rem );
     line-height: 1;
     text-transform: uppercase;
+    opacity: 0.8;
+    border-radius: 2%;
  }
 
  .section-title {
@@ -81,6 +83,7 @@ p {
      line-height: 1;
      color: #17353d;
      margin-bottom: 5rem;
+     padding-top:1rem;
 }
 
  .hero {
@@ -110,22 +113,15 @@ p {
     line-height: 1.2;
 }
 
+.featured_img {
+    border-radius: 5%;
+}
+
 .featured__item:hover,
 .featured__item:focus {
     transform: scale(1);
 }
 
-.featured__item::after {
-    content: '';
-    position: absolute;
-    top:5%;
-    left:1%;
-    padding: 100% 100% 0 0;
-    border-radius: 50%;
-    background: #2193b0;
-    z-index: -1;
-    
-}
 
 .featured__item:hover .featured_details,
 .featured__item:focus .featured_details {
@@ -141,4 +137,46 @@ p {
 
 .featured_details {
     opacity: 0;
+}
+
+/*  PRODUCTS   */
+
+.product {
+    background: radial-gradient(var(--clr-inner, limegreen), var(--clr-outer, purple));
+    padding:  3em;
+    border-radius: 3em;
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.product_title {
+    font-size: 4rem;
+    color: #fff;
+    text-shadow: 0 0 .2em rgba(#000, .2);
+}
+
+.product-image {
+    margin: auto;
+}
+
+.hero {
+    --clr-accent: #faa700;
+}
+
+.meat-chicken {
+    --clr-inner: #faa700;
+    --clr-outer: #e48d00;
+    --clr-accent: #a1173c;
+}
+
+.meat-steak {
+    --clr-inner: #fce4b3;
+    --clr-outer: #eac886;
+    --clr-accent: #2f4858;
+}
+
+.meat-beef {
+    --clr-inner: #6dd5ed;
+    --clr-outer: #2193b0;
+    --clr-accent: #008951;
 }
